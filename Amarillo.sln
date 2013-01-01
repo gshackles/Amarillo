@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amarillo", "src\Amarillo\Amarillo.csproj", "{A123E111-8008-4369-BF8C-3BFDE434D636}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amarillo.IntegrationTests", "tests\Amarillo.IntegrationTests\Amarillo.IntegrationTests.csproj", "{4C95482A-EA20-44EA-93D1-38524B2925F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A123E111-8008-4369-BF8C-3BFDE434D636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A123E111-8008-4369-BF8C-3BFDE434D636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A123E111-8008-4369-BF8C-3BFDE434D636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A123E111-8008-4369-BF8C-3BFDE434D636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C95482A-EA20-44EA-93D1-38524B2925F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C95482A-EA20-44EA-93D1-38524B2925F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C95482A-EA20-44EA-93D1-38524B2925F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C95482A-EA20-44EA-93D1-38524B2925F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
