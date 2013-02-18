@@ -6,7 +6,7 @@ using Amarillo.Payloads;
 
 namespace Amarillo
 {
-    public partial class Amarillo
+    public partial class AmarilloClient
     {
         public Task<Response<BeerList>> ListBeersAsync(string query = null, string orderBy = null, int? page = null, int? beersPerPage = null)
         {

@@ -5,12 +5,12 @@ namespace Amarillo.IntegrationTests
     [TestFixture(Category = "Integration")]
     public abstract class IntegrationTestsBase
     {
-        protected Amarillo Amarillo { get; private set; }
+        protected IAmarilloClient Client { get; private set; }
 
         [SetUp]
         public void SetUp()
         {
-            Amarillo = new Amarillo("");
+            Client = new AmarilloClient("");
         }
     }
 }

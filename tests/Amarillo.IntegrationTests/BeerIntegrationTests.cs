@@ -9,26 +9,26 @@ namespace Amarillo.IntegrationTests
         [Test]
         public void ListBeersAsync_WithQuery_ReturnsBeers()
         {
-            var searchTask = Amarillo.ListBeersAsync(query: "ale");
+            var searchTask = Client.ListBeersAsync(query: "ale");
             searchTask.Wait();
 
             var payload = searchTask.Result.Payload;
 
             Assert.AreEqual(HttpStatusCode.OK, searchTask.Result.Status);
             Assert.NotNull(payload);
-            Assert.Greater(payload.TotalBeers, 0);
-            Assert.Greater(payload.TotalPages, 0);
-            Assert.Greater(payload.CurrentPage, 0);
-            Assert.Greater(payload.Beers.Count, 0);
+            Assert.AreNotEqual(0, payload.TotalBeers);
+            Assert.AreNotEqual(0, payload.TotalPages);
+            Assert.AreNotEqual(0, payload.CurrentPage);
+            Assert.AreNotEqual(0, payload.Beers.Count);
 
             var firstBeer = payload.Beers.First();
 
-            Assert.Greater(firstBeer.Id, 0);
+            Assert.AreNotEqual(0, firstBeer.Id);
             Assert.NotNull(firstBeer.Name);
-            Assert.Greater(firstBeer.ABV, 0);
+            Assert.AreNotEqual(0, firstBeer.ABV);
             Assert.NotNull(firstBeer.Brewery);
 
-            Assert.Greater(firstBeer.Brewery.Id, 0);
+            Assert.AreNotEqual(0, firstBeer.Brewery.Id);
             Assert.NotNull(firstBeer.Name);
         }
 
@@ -37,7 +37,7 @@ namespace Amarillo.IntegrationTests
         {
             int beerId = 17;
 
-            var searchTask = Amarillo.GetBeerAsync(beerId);
+            var searchTask = Client.GetBeerAsync(beerId);
             searchTask.Wait();
 
             var beer = searchTask.Result.Payload;
@@ -46,7 +46,7 @@ namespace Amarillo.IntegrationTests
             Assert.NotNull(beer);
             Assert.AreEqual(beerId, beer.Id);
             Assert.NotNull(beer.Name);
-            Assert.Greater(beer.ABV, 0);
+            Assert.AreNotEqual(0, beer.ABV);
             Assert.NotNull(beer.Brewery);
         }
     }

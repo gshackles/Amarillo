@@ -5,7 +5,7 @@ using Amarillo.Payloads;
 
 namespace Amarillo
 {
-    public interface IAmarillo
+    public interface IAmarilloClient
     {
         Task<Response<BreweryList>> ListBreweriesAsync(string query = null, string orderBy = null, int? page = null, int? beersPerPage = null);
         Task<Response<Brewery>> GetBreweryAsync(int id);

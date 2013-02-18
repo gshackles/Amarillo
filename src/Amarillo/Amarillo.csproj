@@ -42,13 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Amarillo.cs" />
-    <Compile Include="Amarillo.Beers.cs" />
-    <Compile Include="Amarillo.Breweries.cs" />
+    <Compile Include="AmarilloClientClient.cs" />
+    <Compile Include="AmarilloClient.Beers.cs" />
+    <Compile Include="AmarilloClient.Breweries.cs" />
     <Compile Include="Entities\Beer.cs" />
     <Compile Include="Entities\Brewery.cs" />
     <Compile Include="Entities\BreweryList.cs" />
-    <Compile Include="IAmarillo.cs" />
+    <Compile Include="IAmarilloClient.cs" />
     <Compile Include="Network\IRestClient.cs" />
     <Compile Include="Network\JsonRestClient.cs" />
     <Compile Include="Entities\BeerList.cs" />

@@ -5,18 +5,18 @@ using Amarillo.Network;
 
 namespace Amarillo
 {
-    public partial class Amarillo : IAmarillo
+    public partial class AmarilloClient : IAmarilloClient
     {
         private readonly string _apiToken;
         private readonly IRestClient _client;
 
-        public Amarillo(string apiKey)
+        public AmarilloClient(string apiKey)
         {
             _apiToken = apiKey;
             _client = new JsonRestClient("http://api.openbeerdatabase.com/v1");
         }
 
-        public Amarillo(string apiToken, IRestClient client)
+        public AmarilloClient(string apiToken, IRestClient client)
         {
             _apiToken = apiToken;
             _client = client;
