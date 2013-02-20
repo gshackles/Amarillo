@@ -50,8 +50,8 @@
     <Compile Include="..\Amarillo\AmarilloClient.Breweries.cs">
       <Link>AmarilloClient.Breweries.cs</Link>
     </Compile>
-    <Compile Include="..\Amarillo\AmarilloClientClient.cs">
-      <Link>AmarilloClientClient.cs</Link>
+    <Compile Include="..\Amarillo\AmarilloClient.cs">
+      <Link>AmarilloClient.cs</Link>
     </Compile>
     <Compile Include="..\Amarillo\Entities\Beer.cs">
       <Link>Entities\Beer.cs</Link>

@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AmarilloClientClient.cs" />
+    <Compile Include="AmarilloClient.cs" />
     <Compile Include="AmarilloClient.Beers.cs" />
     <Compile Include="AmarilloClient.Breweries.cs" />
     <Compile Include="Entities\Beer.cs" />
