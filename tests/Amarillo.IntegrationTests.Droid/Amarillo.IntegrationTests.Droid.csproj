@@ -76,7 +76,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\Drawable\Icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Amarillo.Droid\Amarillo.Droid.csproj">
+      <Project>{427d6331-e94d-4fde-bb88-f3631bd601fa}</Project>
+      <Name>Amarillo.Droid</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Layout\dialog_achievements.xml" />
   </ItemGroup>

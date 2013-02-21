@@ -112,13 +112,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft_Json_MonoTouch">
-      <HintPath>..\..\ThirdParty\Json.NET\MonoTouch\Newtonsoft_Json_MonoTouch.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Components\json.net-4.5.11\lib\ios\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponent Include="json.net">
+      <Visible>False</Visible>
+      <Version>4.5.11</Version>
+    </XamarinComponent>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

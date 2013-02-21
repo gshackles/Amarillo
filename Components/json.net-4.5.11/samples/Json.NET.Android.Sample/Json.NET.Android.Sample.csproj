@@ -5,13 +5,14 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{427D6331-E94D-4FDE-BB88-F3631BD601FA}</ProjectGuid>
+    <ProjectGuid>{A15E29B4-3BA6-4946-AD78-B8AFDC09884D}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Amarillo.Droid</RootNamespace>
-    <AssemblyName>Amarillo.Droid</AssemblyName>
+    <RootNamespace>Json.NET.Android.Sample</RootNamespace>
+    <AssemblyName>Json.NET.Android.Sample</AssemblyName>
     <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
@@ -23,6 +24,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,70 +34,41 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\Components\json.net-4.5.11\lib\android\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>../../lib\/android/Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Amarillo\AmarilloClient.Beers.cs">
-      <Link>AmarilloClient.Beers.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\AmarilloClient.Breweries.cs">
-      <Link>AmarilloClient.Breweries.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\AmarilloClient.cs">
-      <Link>AmarilloClient.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Entities\Beer.cs">
-      <Link>Entities\Beer.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Entities\BeerList.cs">
-      <Link>Entities\BeerList.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Entities\Brewery.cs">
-      <Link>Entities\Brewery.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Entities\BreweryList.cs">
-      <Link>Entities\BreweryList.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\IAmarilloClient.cs">
-      <Link>IAmarilloClient.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Network\IRestClient.cs">
-      <Link>Network\IRestClient.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Network\JsonRestClient.cs">
-      <Link>Network\JsonRestClient.cs</Link>
-    </Compile>
-    <Compile Include="..\Amarillo\Network\Response.cs">
-      <Link>Network\Response.cs</Link>
-    </Compile>
+    <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Layout\Main.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
-    <XamarinComponent Include="json.net">
-      <Visible>False</Visible>
-      <Version>4.5.11</Version>
-    </XamarinComponent>
+    <AndroidResource Include="Resources\Drawable\Icon.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
+     Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
