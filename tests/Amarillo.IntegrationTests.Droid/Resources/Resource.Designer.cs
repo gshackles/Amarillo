@@ -26,8 +26,6 @@ namespace Amarillo.IntegrationTests.Droid
 		
 		public static void UpdateIdValues()
 		{
-			Amarillo.Droid.Resource.String.ApplicationName = Amarillo.IntegrationTests.Droid.Resource.String.ApplicationName;
-			Amarillo.Droid.Resource.String.Hello = Amarillo.IntegrationTests.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
